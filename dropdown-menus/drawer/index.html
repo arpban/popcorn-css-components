@@ -1,0 +1,130 @@
+<div class="drawer">
+
+  <div class="drawer-handle" onclick="openDrawer()">
+    <span></span>
+  </div>
+
+  <div class="drawer-space">
+    <a class="item ">SIGN UP</a>
+    <a class="item ">LOG IN</a>
+  </div>
+
+</div>
+
+<!--JAVASCRIPT-->
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+function openDrawer(){
+        $('.drawer-handle').toggleClass('open');
+        $('.drawer-space').toggleClass('open');
+}
+</script>
+
+<style type="text/css">
+html, body {
+  margin: 0px;
+  font-family: monospace; }
+
+.drawer * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.drawer:before,
+.drawer:after * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.drawer .drawer-handle {
+  position: absolute;
+  left: 45px;
+  top: 45px;
+  z-index: 501;
+  width: 32px;
+  height: 35px;
+  cursor: pointer; }
+  .drawer .drawer-handle span {
+    position: absolute;
+    cursor: pointer;
+    height: 2px;
+    width: 32px;
+    background: #3498db;
+    position: absolute;
+    display: block;
+    content: '';
+    top: 0px; }
+    .drawer .drawer-handle span:before, .drawer .drawer-handle span:after {
+      cursor: pointer;
+      height: 2px;
+      width: 32px;
+      background: #3498db;
+      position: absolute;
+      display: block;
+      content: '';
+      top: 0px; }
+  .drawer .drawer-handle span {
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+    .drawer .drawer-handle span:after {
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+      top: 16px; }
+    .drawer .drawer-handle span:before {
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+      top: 8px; }
+
+.drawer .drawer-handle.open span {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 10px;
+  background: white; }
+  .drawer .drawer-handle.open span:before {
+    background-color: transparent; }
+  .drawer .drawer-handle.open span:after {
+    background: white;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    top: 0px; }
+
+.drawer .drawer-space {
+  padding: 30px 10px;
+  position: absolute;
+  z-index: 500;
+  -webkit-transform: translateY(-1000%);
+          transform: translateY(-1000%);
+  width: 100%;
+  background-color: #3498db;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .drawer .drawer-space.open {
+    top: 0;
+    height: 100%;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); }
+  .drawer .drawer-space .item {
+    color: white;
+    display: block;
+    font-size: 18px;
+    padding: 10px 0px; }
+    .drawer .drawer-space .item:hover {
+      color: darkblue;
+      cursor: pointer;
+      text-decoration: none; }
+
+</style>

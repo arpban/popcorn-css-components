@@ -1,0 +1,28 @@
+<style>
+  *,:after,:before{box-sizing:border-box}body,html{margin:0;padding:0;font-family:Raleway,"sans-serif"}#slideInShareCard{position:fixed;background-image:linear-gradient(90deg,#f78ca0 0,#f9748f 19%,#fd868c 60%,#fe9a8b);z-index:1;bottom:40px;-webkit-transform:translateX(-100%);transform:translateX(-100%);transition:.4s;padding:10px;border-bottom-right-radius:5px;border-top-right-radius:5px}#slideInShareCard.visible{-webkit-transform:translateX(0);transform:translateX(0)}#slideInShareCard button#cross-btn{position:relative;background:none;outline:none;border:none;float:right;margin-top:5px;color:#ff3939;background:#fff;border-radius:14px;padding:8px 10px}#slideInShareCard button#cross-btn:hover{cursor:pointer}#slideInShareCard .quote{margin-top:10px;color:#fff}#slideInShareCard .icons{margin-top:10px;margin-bottom:10px}#slideInShareCard .icons a{color:#fff;margin-right:3px}#slideInShareCard .icons a:hover{color:#860032}.content{padding:20px;font-weight:300}.content h1{font-size:24px;font-weight:300}.content .credits,.content p{font-size:16px}.content .credits a{text-decoration:none}
+</style>
+<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+<div class="content">
+    <h1>Social Media Sharing - SlideIn</h1>
+    <p>The sharing popup will appear after 3 seconds.</p>
+    <div class="credits">
+        <p>Credits</p>
+        <p>Design : <a href="https://twitter.com/arp_ban">@arp_ban</a></p>
+        <p>Icons : <a href="http://fontawesome.io/">Font Awesome</a></p>
+    </div>
+</div>
+
+<div id="slideInShareCard">
+	<button id="cross-btn"><i class="fa fa-close " aria-hidden="true"></i></button>
+    <div class="quote">It would be awesome if you could share this page.</div>
+	<div class="icons">
+        <a  href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fpopcorncss.com&via=arp_ban&text=I+love+using+PopcornCss,+which+is+collection+of+beautiful+web+components.+I+think+you+will+like+it+too." target="_blank" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpopcorncss.com&title=PopcornCss,+A+collection+of+beautiful+web+components&description=I+love+using+PopcornCss,+which+is+collection+of+beautiful+web+components.+I+think+you+will+like+it+too." target="_blank"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
+        <a href="https://plus.google.com/share?url=https%3A%2F%2Fpopcorncss.com" target="_blank"><i class="fa fa-google-plus-official fa-2x" aria-hidden="true"></i></a>
+        <a href="" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+        <a href="" target="_blank"><i class="fa fa-pinterest fa-2x" aria-hidden="true"></i></a>
+    </div>
+</div>
+<script type="text/javascript">
+  "use strict";var slideInShare=document.getElementById("slideInShareCard"),slideInShareCrossBtn=document.getElementById("cross-btn");setTimeout(function(){slideInShare.className="visible"},3e3),slideInShareCrossBtn.addEventListener("click",function(){slideInShare.className=""});
+</script>

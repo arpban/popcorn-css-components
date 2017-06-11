@@ -1,0 +1,85 @@
+$text-color: white;
+$icons-color: white;
+$icons-hover-color: #860032;
+$cross-btn-color: #ff3939;
+$cross-btn-back-color: white;
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html,body{
+	margin: 0px;
+	padding: 0px;
+	font-family: Raleway, 'sans-serif';
+}
+#slideInShareCard{
+	position: fixed;
+	background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);	
+	z-index: 900;
+	bottom: 40px;
+	transform: translateX(-100%);
+	transition: 400ms;
+	padding: 10px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+	&.visible{
+		transform: translateX(0%);
+	}
+	button#cross-btn{
+		position: relative;
+	    background: none;
+	    outline: none;
+	    border: none;
+	    float: right;
+	    margin-top: 5px;
+	    color: $cross-btn-color;
+	    background: $cross-btn-back-color;
+	    border-radius: 14px;
+	    padding: 8px 10px;
+	    &:hover{
+	    	cursor: pointer;
+	    }
+
+	}
+	.quote{
+	    margin-top: 10px;
+    	color: $text-color;
+	}
+	.icons{
+	    margin-top: 10px;
+    	margin-bottom: 10px;
+    	a{
+    		color: $icons-color;
+    		margin-right: 3px;
+    		&:hover{
+    			color: $icons-hover-color;
+    		}
+    	}
+	}
+}
+
+.content{
+	padding: 20px;
+	font-weight: 300;
+	h1{
+		font-size: 24px;
+		font-weight: 300;
+	}
+	p{
+		font-size: 16px;
+	}
+	.credits{
+		font-size: 16px;
+		a{
+			text-decoration: none;
+		}
+	}
+}
