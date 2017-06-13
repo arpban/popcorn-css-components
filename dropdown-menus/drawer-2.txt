@@ -1,0 +1,145 @@
+//DRAWER STYLE 2
+
+.drawer {
+    display: none;
+
+    .drawer-handle {
+        //display: none;
+        position: absolute;
+        right: 30px;
+        top: 45px;
+        z-index: 10;
+        width: 32px;
+        height: 35px;
+        cursor: pointer;
+
+        span {
+            position: absolute;
+            cursor: pointer;
+            height: 2px;
+            width: 32px;
+            background: $lightblack;
+            position: absolute;
+            display: block;
+            content: '';
+            top: 0px;
+
+            &:before, &:after {
+                cursor: pointer;
+                height: 2px;
+                width: 32px;
+                background: $lightblack;
+                position: absolute;
+                display: block;
+                content: '';
+                top: 0px;
+            }
+
+            &:before {
+
+            }
+        }
+
+        span {
+            -webkit-transition: all 0.2s ease;
+            -moz-transition: all 0.2s ease;
+            -ms-transition: all 0.2s ease;
+            -o-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+
+            &:after {
+                -webkit-transition: all 0.2s ease;
+                -moz-transition: all 0.2s ease;
+                -ms-transition: all 0.2s ease;
+                -o-transition: all 0.2s ease;
+                transition: all 0.2s ease;
+                top: 16px;
+            }
+
+            &:before {
+                -webkit-transition: all 0.2s ease;
+                -moz-transition: all 0.2s ease;
+                -ms-transition: all 0.2s ease;
+                -o-transition: all 0.2s ease;
+                transition: all 0.2s ease;
+                top: 8px;
+            }
+        }
+    }
+
+    .drawer-handle.open {
+        span{
+            transform: rotate(45deg);
+            top: 10px;
+            &:before{
+                background-color: transparent;
+            }
+            &:after{
+                transform: rotate(90deg);
+                top: 0px;
+            }
+        }
+    }
+
+    .drawer-space {
+        padding: 30px 10px;
+        padding-top: 110px;
+        position: absolute;
+        z-index: 4;
+        transform: translateY(-1000%);
+        width: 100%;
+        //background-image: linear-gradient(to bottom, #ace0f9 0%, #ffffff 100%);
+        background-color: $lightblue;
+        color: $white;
+        transition: 400ms;
+        text-align: center;
+        &.open {
+            top: 0;
+            height: 100%;
+            transform: translateY(0%);
+        }
+        .item{
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: $white;
+            display: block;
+            font-size: 18px;
+            padding: 10px 0px;
+            &:hover{
+                text-decoration: none;
+                color: $darkblue;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 700px){
+    .drawer{
+        display: block;
+    }
+}
+
+
+//HTML
+<div class="drawer">
+
+  <div class="drawer-handle" onclick="openDrawer()">
+    <span></span>
+  </div>
+
+  <div class="drawer-space">
+    <a class="item ">SIGN UP</a>
+    <a class="item ">LOG IN</a>
+  </div>
+
+</div>
+
+
+//JAVASCRIPT
+<script type="text/javascript">
+function openDrawer(){
+        $('.drawer-handle').toggleClass('open');
+        $('.drawer-space').toggleClass('open');
+}
+</script>

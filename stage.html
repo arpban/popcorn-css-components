@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stage</title>
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link href="css/grid.css">
+	<style type="text/css">
+		html,body{
+			margin: 0px;
+			padding: 0px;
+			/* font-family: 'Raleway', sans-serif; */
+			-webkit-box-sizing: border-box;
+		  	-moz-box-sizing: border-box;
+		  	box-sizing: border-box;
+		}
+		.code-view{
+			font-family: 'Raleway', sans-serif;
+			-webkit-box-sizing: border-box;
+		  	-moz-box-sizing: border-box;
+		  	box-sizing: border-box;
+			font-size: 16px;
+	        position: fixed;
+	        top: 0px;
+	        display: none;
+	        background-color: rgb(10, 10, 10);
+	        color: rgb(0,255,0);
+	        width: 100%;
+	        height: 100%;
+	        min-height: 100%;
+	        z-index: 500; 
+		}
+		.code-view *{
+			-webkit-box-sizing: border-box;
+		  	-moz-box-sizing: border-box;
+		  	box-sizing: border-box;
+		}
+		.code-view .container{
+			height: 100%;
+			padding: 20px;
+			padding-bottom: 80px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+		.code-view .container .column{
+			width: 33.333333%;
+			padding: 15px;
+		}
+		.code-view .container .column textarea{
+			background-color: black;
+	        color: rgb(0,255,0);
+			width: 100%;
+			border: none;
+			border-radius: 4px;
+	        outline: none;
+	        height: 100%;
+	        padding: 10px;
+	        font-size: 13px;
+		}
+		.code-view .container .column textarea:hover, .code-view .container .column textarea:focus{
+			border: 1px solid #76E5FC;
+			padding: 9px;
+		}
+		.code-view .container .column textarea::-webkit-scrollbar-track
+		{
+			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+			background-color: #000000;
+		}
+
+		.code-view .container .column textarea::-webkit-scrollbar
+		{
+			width: 6px;
+			background-color: #000000;
+		}
+
+		.code-view .container .column textarea::-webkit-scrollbar-thumb
+		{
+			background-color: #76E5FC;
+		}
+
+		.code-view .container .column .heading{
+			font-size: 18px;
+			color: #76E5FC;
+			padding-bottom: 5px;
+		}
+		.code-view:focus{
+			outline: none;
+		}
+		.backstage-door{
+        position: fixed;
+        z-index: 10;
+        /* display: none; */
+        background: rgb(255, 57, 57);
+        color: black;
+        border: none;
+        // border: 1px solid black;
+        padding: 15px;
+        border-radius: 4px;
+        margin: 10px;
+        font-weight: 400;
+        bottom: 0;
+        // right: 0;
+        z-index: 501;
+    	}
+    	.backstage-door:hover{
+    		background: black;
+    		color: white;
+    		cursor: pointer;
+    	}
+    	.backstage-door:focus{
+    		outline: none;
+    	}
+	</style>
+</head>
+
+<body>
+
+<div class="view">	
+<style>
+.loader{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: white;
+		margin: 0px;
+		padding: 0px;
+		top: 0px;
+		left: 0px;
+		display: flex;
+		align-items: center;
+	}
+	.loader-inner{
+		margin: auto;
+		color: rgb(255, 57, 57);
+		
+	}
+	.loader-inner .text{
+		text-align: center;
+		font-size: 16px;
+	}
+	.loader-inner label{
+		font-size: 20px;
+		display: inline-block;
+		opacity: 0;
+	}
+
+@keyframes lol {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  33% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  66% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+}
+
+@-webkit-keyframes lol {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-300px);
+  }
+  33% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+  }
+  66% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(300px);
+  }
+}
+
+.loader-inner label:nth-child(6) {
+  -webkit-animation: lol 3s infinite ease-in-out;
+  animation: lol 3s infinite ease-in-out;
+}
+
+.loader-inner label:nth-child(5) {
+  -webkit-animation: lol 3s 100ms infinite ease-in-out;
+  animation: lol 3s 100ms infinite ease-in-out;
+}
+
+.loader-inner label:nth-child(4) {
+  -webkit-animation: lol 3s 200ms infinite ease-in-out;
+  animation: lol 3s 200ms infinite ease-in-out;
+}
+
+.loader-inner label:nth-child(3) {
+  -webkit-animation: lol 3s 300ms infinite ease-in-out;
+  animation: lol 3s 300ms infinite ease-in-out;
+}
+
+.loader-inner label:nth-child(2) {
+  -webkit-animation: lol 3s 400ms infinite ease-in-out;
+  animation: lol 3s 400ms infinite ease-in-out;
+}
+
+.loader-inner label:nth-child(1) {
+  -webkit-animation: lol 3s 500ms infinite ease-in-out;
+  animation: lol 3s 500ms infinite ease-in-out;
+}
+</style>
+
+	<div class="loader">
+	  <div class="loader-inner">
+	    <label>	&#8226;</label>
+	    <label>	&#8226;</label>
+	    <label>	&#8226;</label>
+	    <label>	&#8226;</label>
+	    <label>	&#8226;</label>
+	    <label>	&#8226;</label>
+	    <div class="text">Loading</div>
+	  </div>
+	</div>
+</div>
+
+<div class="code-view">
+	<div class="container">
+		<div class="column">
+			<div class="heading">Html</div>
+			<textarea class="html"></textarea>
+		</div>
+		<div class="column">
+			<div class="heading">Sass</div>
+			<textarea class="sass"></textarea>
+		</div>
+		<div class="column">
+			<div class="heading">Javascript</div>
+			<textarea class="js"></textarea>
+		</div>
+	</div>	
+</div>
+<button class="backstage-door" onclick="goBackstage()">View Code</button>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script type="text/javascript">
+	var isBackstageOpen = false;
+	function getUrlVars()
+	{
+	    var vars = [], hash;
+	    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+	    for(var i = 0; i < hashes.length; i++)
+	    {
+	        hash = hashes[i].split('=');
+	        vars.push(hash[0]);
+	        vars[hash[0]] = hash[1];
+	    }
+	    return vars;
+	}
+	var path = getUrlVars()["path"];
+	$('.view').load(path, function(responseText){
+		var htmlPath = path+ '/main.html';
+		$.ajax({url:htmlPath, success: function(result){
+			$('textarea.html').text(result);
+		}});
+		var sassPath = path+ '/main.scss';
+		$.ajax({url:sassPath,dataType: "text", success: function(result){
+			$('textarea.sass').text(result);
+		}});
+		var jsPath = path+ '/main.js';
+		$.ajax({url:jsPath,dataType: "text", success: function(result){
+			$('textarea.js').text(result);
+		}});
+	});
+	function goBackstage(){
+		$('.code-view').fadeToggle(400);
+		if(!isBackstageOpen){
+			$('.backstage-door').html('Output');
+			$('.backstage-door').toggleClass('.hover');
+			isBackstageOpen = !isBackstageOpen;
+		}else{
+			$('.backstage-door').html('View Code');
+			isBackstageOpen = !isBackstageOpen;
+		}
+	}
+</script>
+
+</body>
+</html>

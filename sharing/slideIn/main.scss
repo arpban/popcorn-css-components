@@ -4,22 +4,6 @@ $icons-hover-color: #860032;
 $cross-btn-color: #ff3939;
 $cross-btn-back-color: white;
 
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-html,body{
-	margin: 0px;
-	padding: 0px;
-	font-family: Raleway, 'sans-serif';
-}
 #slideInShareCard{
 	position: fixed;
 	background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);	
@@ -63,23 +47,5 @@ html,body{
     			color: $icons-hover-color;
     		}
     	}
-	}
-}
-
-.content{
-	padding: 20px;
-	font-weight: 300;
-	h1{
-		font-size: 24px;
-		font-weight: 300;
-	}
-	p{
-		font-size: 16px;
-	}
-	.credits{
-		font-size: 16px;
-		a{
-			text-decoration: none;
-		}
 	}
 }
