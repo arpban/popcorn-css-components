@@ -265,15 +265,15 @@
 	var path = getUrlVars()["path"];
 	console.log(path);
 	$('.view').load(path, function(responseText){
-		var htmlPath = path+ '/main.html';
+		var htmlPath = path+ 'main.html';
 		$.ajax({url:htmlPath, success: function(result){
 			$('textarea.html').text(result);
 		}});
-		var sassPath = path+ '/main.scss';
+		var sassPath = path+ 'main.scss';
 		$.ajax({url:sassPath,dataType: "text", success: function(result){
 			$('textarea.sass').text(result);
 		}});
-		var jsPath = path+ '/main.js';
+		var jsPath = path+ 'main.js';
 		$.ajax({url:jsPath,dataType: "text", success: function(result){
 			$('textarea.js').text(result);
 		}});
