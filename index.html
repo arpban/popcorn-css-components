@@ -263,6 +263,7 @@
 	    return vars;
 	}
 	var path = getUrlVars()["path"];
+	console.log(path);
 	$('.view').load(path, function(responseText){
 		var htmlPath = path+ '/main.html';
 		$.ajax({url:htmlPath, success: function(result){
