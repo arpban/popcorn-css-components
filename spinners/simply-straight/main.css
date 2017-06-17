@@ -13,7 +13,8 @@
     margin: auto;
     color: #3498db; }
     .simply-straight .spinner .points label {
-      font-size: 20px;
+      font-size: 30px;
+      margin-right: 5px;
       display: inline-block;
       opacity: 0; }
 
