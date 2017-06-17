@@ -1,31 +1,3 @@
-<div class="drawer">
-
-  <div class="drawer-handle" onclick="openDrawer()">
-    <span></span>
-  </div>
-
-  <div class="drawer-space">
-    <a class="item ">SIGN UP</a>
-    <a class="item ">LOG IN</a>
-  </div>
-
-</div>
-
-<!--JAVASCRIPT-->
-
-<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-
-<script type="text/javascript">
-function openDrawer(){
-        $('.drawer-handle').toggleClass('open');
-        $('.drawer-space').toggleClass('open');
-}
-</script>
-
-<style type="text/css">
 html, body {
   margin: 0px;
   font-family: monospace; }
@@ -126,5 +98,3 @@ html, body {
       color: darkblue;
       cursor: pointer;
       text-decoration: none; }
-
-</style>
