@@ -1,0 +1,199 @@
+$navbar-font: "Raleway", sans-serif;
+
+$navbar-header: #ffcc07;
+$navbar-item: #40bcff;
+$navbar-item-hover: #3f51b5;
+
+$line-color: #3498db;
+$line-color-open: white;
+$dropdown-menu-color: #3498db;
+$dropdown-menu-item-color: white;
+$dropdown-menu-item-hover-color: darkblue;
+
+
+.navbar, .drawer * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.navbar:before, .drawer:before,
+.navbar:after, .drawer:after * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.navbar{
+    font-family: $navbar-font;
+    position: relative;
+    z-index: 2;
+    padding: 40px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    a{
+        text-decoration: none;
+    }
+    div.name{
+        color: $navbar-header;
+        display: inline-block;
+        a{
+            color: inherit;
+            &:hover{
+                color: inherit;
+                text-decoration: none;
+            }
+
+        }
+    }
+    div.items{
+        display: inline-block;
+        float: right;
+        a{
+            color: $navbar-item;
+            margin-left: 25px;
+            text-decoration: none;
+            &:hover{
+                color: $navbar-item-hover;
+            }
+        }
+        a.btn{
+            border: 2px solid;
+            border-radius: 4px;
+            padding: 15px 25px;
+            &:hover{
+                background-color: $navbar-item;
+                color: white;
+                border-color: $navbar-item;
+            }
+        }
+    }
+}
+
+.drawer {
+    display: none;
+    font-family: $navbar-font;
+    .drawer-handle {
+        position: absolute;
+        right: 45px;
+        top: 45px;
+        z-index: 501;
+        width: 32px;
+        height: 35px;
+        cursor: pointer;
+
+        span {
+            position: absolute;
+            cursor: pointer;
+            height: 2px;
+            width: 32px;
+            background: $line-color;
+            position: absolute;
+            display: block;
+            content: '';
+            top: 0px;
+
+            &:before, &:after {
+                cursor: pointer;
+                height: 2px;
+                width: 32px;
+                background: $line-color;
+                position: absolute;
+                display: block;
+                content: '';
+                top: 0px;
+            }
+
+            &:before {}
+        }
+
+        span {
+            -webkit-transition: all 0.2s ease;
+            -moz-transition: all 0.2s ease;
+            -ms-transition: all 0.2s ease;
+            -o-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+
+            &:after {
+                -webkit-transition: all 0.2s ease;
+                -moz-transition: all 0.2s ease;
+                -ms-transition: all 0.2s ease;
+                -o-transition: all 0.2s ease;
+                transition: all 0.2s ease;
+                top: 16px;
+            }
+
+            &:before {
+                -webkit-transition: all 0.2s ease;
+                -moz-transition: all 0.2s ease;
+                -ms-transition: all 0.2s ease;
+                -o-transition: all 0.2s ease;
+                transition: all 0.2s ease;
+                top: 8px;
+            }
+        }
+    }
+
+    .drawer-handle.open {
+        span {
+            transform: rotate(45deg);
+            top: 10px;
+            background: $line-color-open;
+
+            &:before {
+                background-color: transparent;
+            }
+
+            &:after {
+                background: $line-color-open;
+                transform: rotate(90deg);
+                top: 0px;
+            }
+        }
+    }
+
+    .drawer-space {
+        padding: 30px 10px;
+        position: absolute;
+        z-index: 500;
+        transform: translateY(-1000%);
+        width: 100%;
+        background-color: $dropdown-menu-color;
+        transition: 400ms;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &.open {
+            top: 0;
+            height: 100%;
+            transform: translateY(0%);
+        }
+
+        .item {
+            color: $dropdown-menu-item-color;
+            display: block;
+            font-size: 18px;
+            padding: 10px 0px;
+
+            &:hover {
+                color: $dropdown-menu-item-hover-color;
+                cursor: pointer;
+                text-decoration: none;           
+            }
+        }
+    }
+}
+
+@media (max-width: 700px){
+    .drawer{
+        display: block;
+    }
+    .navbar{
+        div.items{
+            display: none;
+        }
+    }
+}

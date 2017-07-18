@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Navbar 2</title>
+		<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet">
+		<link rel="stylesheet" href="main.css">
+		<style type="text/css">
+			html,body{
+				height: 100%;
+				margin: 0;
+				overflow-x: hidden;
+			}
+			.note{
+				font-family: "Raleway", sans-serif;
+				padding-top: 70px;
+				display: flex;
+				justify-content: center;
+				height: 100%;
+				align-items: center;
+				color: grey;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="name">
+				<a href="#">LOREM IPSUM</a>
+			</div>
+			<div class="items">
+				<a href="#" class="">SIGN UP</a>
+				<a href="#" class="btn">LOG IN</a>
+			</div>
+		</div>
+		<div class="drawer">
+			<div class="drawer-handle" onclick="openDrawer()">
+				<span></span>
+			</div>
+			<div class="drawer-space">
+				<a class="item ">SIGN UP</a>
+				<a class="item ">LOG IN</a>
+			</div>
+		</div>
+		<div class="note">
+			Try resizing the window.
+		</div>
+		<script
+		src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		crossorigin="anonymous"></script>
+		<script src="main.js"></script>
+	</body>
+</html>
