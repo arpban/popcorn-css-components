@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Navbar 1</title>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+		<link rel="stylesheet" href="main.css">
+		<style type="text/css">
+			html,body{
+				height: 100%;
+			}
+			.note{
+				font-family:  "Open Sans", sans-serif;
+				padding-top: 70px;
+				display: flex;
+				justify-content: center;
+				height: 100%;
+				align-items: center;
+				color: grey;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="navbar">
+			
+			<div id="menu" class="pull-right">
+				<a href="#" class="menu-item active">ABOUT</a>
+				<a href="#" class="menu-item">WORK</a>
+				<a href="#" class="menu-item">CONTACT</a>
+			</div>
+			<div id="logo" class="">
+				<a href="#">LOREM IPSUM</a>
+			</div>
+			
+			<div class="drawer">
+				<div class="drawer-handle" onclick="openDrawer()">
+					<span></span>
+				</div>
+			</div>
+			<div class="dropdown-menu" class="pull-left">
+				<a href="#" class="menu-item active" >ABOUT</a>
+				<a href="#" class="menu-item" >WORK</a>
+				<a href="#" class="menu-item" >CONTACT</a>
+			</div>
+		</div>
+		<div class="note">
+			Try resizing the window.
+		</div>
+		<script
+		src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		crossorigin="anonymous"></script>
+		<script src="main.js"></script>
+	</body>
+</html>
