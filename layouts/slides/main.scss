@@ -1,0 +1,53 @@
+$font: "Raleway", sans-serif;
+
+html, body {
+    height: 100%;
+}
+
+.slides{
+  height: 100%;
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    *:before,
+    *:after {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }  
+}
+
+.slide {
+    min-height: 100%;
+    padding: 0.1px;
+}
+
+.slides{
+	.dots{
+		// position: absolute;
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		right: 0px;
+		top: 45%;
+		padding: 10px;
+		button{
+			width: 12px;
+			height: 12px;
+			margin-bottom: 7px;
+			border-radius: 50%;
+			border: none;
+			background-color: lightblue;
+			cursor: pointer;
+			&:hover{
+				background-color: blue;
+			}
+			&.active{
+				background-color: blue;
+			}
+		}
+	}
+}

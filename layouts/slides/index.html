@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Slide layout</title>
+		<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+		<link rel="stylesheet" href="main.css">
+		<style type="text/css">
+			html,body{
+				margin: 0;
+				font-family:'Playfair Display', serif;
+				/* font-weight: 300; */
+			}
+			.one{
+				background-color: black;
+				color: #ffd400;
+			}
+			.two{
+				background-color: #ffd400;
+				color: black;
+			}
+			.three{
+				background-color: black;
+				color: #ffd400;
+			}
+			.slide{
+				padding: 20px;
+			}
+			h1{
+				margin: 0;
+				margin-top: 50px ;
+				font-family: 'Playfair Display', serif;
+				font-size: 50px;
+			}
+			h3{
+				font-size: 20px;
+				color: white;
+			}
+			p{
+				margin-top: 20px;
+				font-family: 'Raleway';
+				font-weight: 400;
+				font-size: 18px;
+				letter-spacing: 0.1px;
+				line-height: 1.7em;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="slides">
+			<div class="slide one">
+				<h1>Slide One</h1>
+				<h3>Press Arrow keys to move up, down</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat nulla sem, et venenatis risus tincidunt et. Quisque scelerisque ex nisi, sit amet scelerisque urna maximus sit amet. Donec sollicitudin elementum vehicula. Fusce ut pharetra turpis. Praesent maximus, est in volutpat viverra, mi quam consequat metus, at cursus urna quam eget lorem. In viverra pellentesque tellus, vestibulum faucibus dui bibendum a. Donec sollicitudin fringilla iaculis. Praesent rutrum viverra nisl, at cursus ipsum gravida a. Sed luctus placerat mi, id viverra quam. Maecenas auctor, ex eget tristique commodo, lectus enim vulputate quam, vitae luctus ex risus sed urna. Donec eget nunc a diam commodo egestas id ut diam. Vivamus et dolor ullamcorper, molestie lectus eu, pharetra mi. </p>
+			</div>
+			<div class="slide two">
+				<h1>Slide Two</h1>
+				<h3>Press Arrow keys to move up, down</h3>
+				<p>Vivamus mattis fermentum diam a dictum. Donec in varius augue. Nunc lacinia mi et sem suscipit efficitur. Nam rhoncus purus ut molestie dapibus. Duis venenatis non neque vel luctus. Cras a enim arcu. Nullam in molestie risus, et ornare lacus. Integer aliquam, lacus non tincidunt rutrum, enim purus faucibus purus, at maximus diam velit vel lacus. In sed dui aliquet, consequat purus in, posuere felis. Aliquam mi libero, placerat at tellus eget, sagittis efficitur enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris placerat sodales nisi non dignissim. Proin cursus sapien velit, nec tristique nisl tristique maximus. Curabitur nec lectus mattis, euismod risus non, imperdiet orci. Ut gravida fringilla vestibulum. Donec nunc enim, venenatis sit amet lectus eget, laoreet mattis enim.</p>
+			</div>
+			<div class="slide three">
+				<h1>Slide Three</h1>.
+				<h3>Press Arrow keys to move up, down</h3>
+				<p>Mauris viverra tempor massa vel auctor. Vivamus tortor lectus, luctus id vulputate et, vulputate ac odio. Suspendisse vehicula eu enim id volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec dignissim leo vitae feugiat rutrum. Integer tempor ullamcorper quam non rhoncus. Sed dolor metus, finibus interdum ullamcorper a, laoreet vel lacus. Pellentesque nec tempus augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris tempor rhoncus lectus nec aliquet. Vestibulum scelerisque leo arcu, a aliquam nisi hendrerit vitae. Pellentesque tincidunt, nisl vel dictum imperdiet, arcu felis ultrices mauris, at egestas erat ligula vitae magna. Integer placerat eu dolor non cursus. </p>
+			</div>
+			<div class="dots">
+				<button class="active" onclick="scrollpage('.one')"></button>
+				<button onclick="scrollpage('.two')"></button>
+				<button onclick="scrollpage('.three')"></button>
+			</div>
+		</div>
+		
+
+		<script
+		src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		crossorigin="anonymous"></script>
+		<script src="main.js"></script>
+	</body>
+</html>
