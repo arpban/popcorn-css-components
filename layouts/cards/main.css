@@ -1,0 +1,97 @@
+html, body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  height: 100%;
+  background-color: #FAFAFA;
+  color: black; }
+
+img {
+  max-width: 100%; }
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+  .cards .card {
+    width: 23.4042553%;
+    margin-left: 0.79787235%;
+    margin-right: 0.79787235%;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+    .cards .card a {
+      -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+              box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+      display: block;
+      overflow: hidden;
+      -webkit-transition: 0.18s;
+      transition: 0.18s;
+      border-radius: 6px;
+      cursor: pointer; }
+      .cards .card a:hover {
+        -webkit-transform: translateY(-2px);
+                transform: translateY(-2px);
+        -webkit-box-shadow: 0 1px 50px rgba(0, 0, 0, 0.2);
+                box-shadow: 0 1px 50px rgba(0, 0, 0, 0.2); }
+      .cards .card a .cover {
+        position: relative;
+        background-color: #959597;
+        overflow: hidden;
+        height: 200px;
+        width: 100%; }
+        .cards .card a .cover img {
+          -o-object-fit: cover;
+             object-fit: cover;
+          width: 100%;
+          height: 100%;
+          border-style: none; }
+      .cards .card a .description {
+        padding: 15px;
+        color: black; }
+        .cards .card a .description .title {
+          font-size: 16px;
+          font-weight: 400; }
+        .cards .card a .description .created {
+          font-size: 14px;
+          color: #ababab;
+          margin-top: 0px; }
+        .cards .card a .description .summary {
+          height: 50px;
+          overflow: hidden;
+          margin-top: 1px; }
+        .cards .card a .description button {
+          border: none;
+          margin-top: 10px;
+          text-transform: uppercase;
+          font-weight: 700;
+          padding: 0;
+          font-size: 12px;
+          color: #338fff;
+          background: transparent; }
+
+@media (max-width: 900px) {
+  .cards .card {
+    width: 31.66666666%;
+    margin-left: 0.833333367%;
+    margin-right: 0.833333367%;
+    margin-top: 10px;
+    margin-bottom: 10px; } }
+
+@media (max-width: 600px) {
+  .cards .card {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px; } }

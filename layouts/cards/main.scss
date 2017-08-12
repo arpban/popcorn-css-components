@@ -1,0 +1,133 @@
+$font: 'Lato', sans-serif;
+//COLORS
+$white: #FAFAFA;
+$black: black;
+$grey: #ababab;
+$orange: #ff8000;
+$blue: #338fff;
+
+html, body {
+    margin: 0;
+	font-family: $font;
+	font-weight: 300;
+	font-size: 14px;
+	height: 100%;
+	background-color: $white;
+	color: $black;
+}
+
+img{
+    max-width: 100%;
+}
+.notebooks{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:flex-start;
+	flex-grow: 1;
+	align-items: flex-start;
+	.notebook{
+		// min-width: 210px;
+		// flex-basis: 23.35767%;
+		width: 23.4042553%;
+		margin-left: 0.79787235%;
+	    margin-right: 0.79787235%;
+	    margin-top: 10px;
+	    margin-bottom: 10px;
+		a{
+			box-shadow: 0 1px 8px rgba(0,0,0,.1);
+		    position: relative;
+		    display: block;
+		    overflow: hidden;
+		    transition: 0.18s;
+		    border-radius: 6px;
+		    cursor: pointer;
+		    &:hover{
+		    	transform: translateY(-2px);
+		    	box-shadow: 0 1px 50px rgba(0,0,0,.2);
+		    }
+		    .cover{
+		    	position: relative;
+			    background-color: #959597;
+			    overflow: hidden;
+			    height: 200px;
+			    width: 100%;
+			   	img{
+			   		// position: absolute;
+				    // top: 0;
+				    // left: 0;
+				    // right: 0;
+				    // bottom: 0;
+				    object-fit: cover;
+				    width: 100%;
+				    height: 100%;
+				    border-style: none;
+			   	}
+		    }
+		    .description{
+		    	padding: 15px;
+		    	color: $black;
+		    	.title{
+		    		font-size: 16px;
+		    		font-weight: 400;
+		    	}
+		    	.created{
+		    		font-size: 14px;
+		    		color: $grey;
+		    		margin-top: 0px;
+		    	}
+		    	.summary{
+		    		height: 50px;
+		    		overflow: hidden;
+		    		margin-top: 1px;
+		    	}
+		    	button{
+		    		border: none;
+		    		margin-top: 10px;
+		    		text-transform: uppercase;
+		    		font-weight: 700;
+		    		padding: 0;
+		    		font-size: 12px;
+		    		color: $blue;
+		    	}
+		    }
+		    
+		}
+	}
+}
+@media (max-width: 900px){
+	.dashboard{
+		.main{
+			.content{
+				.notebooks{
+					.notebook{
+						// flex-basis: 100%;
+						width: 31.66666666%;
+						margin-left: 0.833333367%;
+					    margin-right: 0.833333367%;
+					    margin-top: 10px;
+					    margin-bottom: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 600px){
+	.dashboard{
+		.main{
+			.content{
+				.notebooks{
+					.notebook{
+						// flex-basis: 100%;
+						width: 100%;
+						// margin-left: 0.79787235%;
+					    // margin-right: 0.79787235%;
+					    margin-top: 10px;
+					    margin-bottom: 10px;
+					}
+				}
+				
+			}
+		}
+	}
+}
