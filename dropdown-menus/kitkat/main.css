@@ -1,0 +1,98 @@
+.drawer * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.drawer:before,
+.drawer:after * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.drawer .drawer-handle {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 501;
+  width: 30px;
+  height: 35px;
+  cursor: pointer; }
+  .drawer .drawer-handle span {
+    position: absolute;
+    cursor: pointer;
+    height: 1px;
+    width: 30px;
+    background: black;
+    position: absolute;
+    display: block;
+    content: '';
+    top: 0px; }
+    .drawer .drawer-handle span:before, .drawer .drawer-handle span:after {
+      cursor: pointer;
+      height: 1px;
+      width: 30px;
+      background: black;
+      position: absolute;
+      display: block;
+      content: '';
+      top: 0px; }
+  .drawer .drawer-handle span.second {
+    top: 7px; }
+  .drawer .drawer-handle span {
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+    .drawer .drawer-handle span:after {
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+      top: 14px; }
+    .drawer .drawer-handle span:before {
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+      top: 7px; }
+
+.drawer .drawer-handle.open span {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 10px;
+  background: white; }
+  .drawer .drawer-handle.open span:before {
+    background-color: transparent; }
+  .drawer .drawer-handle.open span:after {
+    background: white;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    top: 0px; }
+
+.drawer .drawer-space {
+  padding: 30px 10px;
+  position: absolute;
+  z-index: 500;
+  -webkit-transform: translateY(-1000%);
+          transform: translateY(-1000%);
+  width: 100%;
+  background-color: black;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .drawer .drawer-space.open {
+    top: 0;
+    height: 50%;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); }
+  .drawer .drawer-space .item {
+    color: white;
+    display: block;
+    font-size: 18px;
+    padding: 10px 0px; }
+    .drawer .drawer-space .item:hover {
+      color: darkblue;
+      cursor: pointer;
+      text-decoration: none; }
