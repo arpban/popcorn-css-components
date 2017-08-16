@@ -1,0 +1,140 @@
+header * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+header:before,
+header:after * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+header {
+  width: 100%;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  header .text {
+    float: right;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 2px; }
+
+.btn1 {
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  padding: 12px;
+  border: solid 1px;
+  border-radius: 2px;
+  cursor: pointer; }
+  .btn1:hover {
+    color: #338fff;
+    border-color: #338fff; }
+  .btn1:focus {
+    outline: none; }
+
+.drawer .drawer-handle {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 501;
+  width: 30px;
+  height: 35px;
+  cursor: pointer; }
+  .drawer .drawer-handle span {
+    position: absolute;
+    cursor: pointer;
+    height: 1px;
+    width: 30px;
+    background: black;
+    position: absolute;
+    display: block;
+    content: '';
+    top: 0px; }
+    .drawer .drawer-handle span:before, .drawer .drawer-handle span:after {
+      cursor: pointer;
+      height: 1px;
+      width: 30px;
+      background: black;
+      position: absolute;
+      display: block;
+      content: '';
+      top: 0px; }
+  .drawer .drawer-handle span.second {
+    top: 7px; }
+  .drawer .drawer-handle span {
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+    .drawer .drawer-handle span:after {
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+      top: 14px; }
+    .drawer .drawer-handle span:before {
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+      top: 7px; }
+
+.drawer .drawer-handle.open {
+  position: fixed; }
+  .drawer .drawer-handle.open span {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 10px;
+    background: white; }
+    .drawer .drawer-handle.open span:before {
+      background-color: transparent; }
+    .drawer .drawer-handle.open span:after {
+      background: white;
+      -webkit-transform: rotate(90deg);
+              transform: rotate(90deg);
+      top: 0px; }
+
+.drawer .drawer-space {
+  position: fixed;
+  z-index: 500;
+  -webkit-transform: translateX(-1000%);
+          transform: translateX(-1000%);
+  width: 40%;
+  height: 100%;
+  background-color: black;
+  color: #fafafa;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 20px;
+  font-size: 15px; }
+  .drawer .drawer-space.open {
+    top: 0;
+    left: 0;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%); }
+  .drawer .drawer-space div {
+    padding: 10px 0px; }
+  .drawer .drawer-space .username {
+    font-size: 16px;
+    text-transform: capitalize; }
+  .drawer .drawer-space .quote-of-the-day {
+    width: 90%; }
+  .drawer .drawer-space .links .drawer-link {
+    color: #fafafa;
+    display: block;
+    font-size: 16px;
+    padding: 5px 0px; }
+    .drawer .drawer-space .links .drawer-link:hover {
+      color: #338fff; }
+
+@media (max-width: 900px) {
+  .drawer .drawer-space {
+    width: 50%; } }
+
+@media (max-width: 600px) {
+  .drawer .drawer-space {
+    width: 100%; } }

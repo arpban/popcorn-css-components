@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Drawer</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+		<link rel="stylesheet" href="main.css">
+		<style type="text/css">
+			html,body{
+				margin: 0;
+				font-family:'Lato', sans-serif;
+				font-weight: 300;
+				height: 100%;
+			}
+			h1,h2,h3,h4{
+		margin: 0;
+		padding: 0;
+		font-weight: 400;
+		}
+		h1,h2,h3,h4,p{
+		margin: 10px 0px;
+		padding: 0px;
+		}
+		p{
+		line-height: 1.5em;
+		}
+		h2{
+		font-size: 25px;
+		}
+		a{
+		text-decoration: none;
+		&:hover{
+		text-decoration: none;
+		}
+		}
+			
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="text">
+				<a href="http://popcorncss.com">POPCORNCSS.com</a>
+			</div>
+			<div class="drawer">
+				<div class="drawer-handle" onclick="openDrawer()">
+					<span class="first"></span>
+					<!-- <span class="second"></span> -->
+				</div>
+				<div class="drawer-space">
+					<div class="username">slide in drawer</div>
+					<div class="quote-of-the-day">"Imperfection is beauty, madness is genius and it's better to be absolutely ridiculous than absolutely boring"<br><span>-Marilyn Monroe</span></div>
+					<div class="links">
+						<a href="#" class="drawer-link">Home</a>
+						<a href="#" class="drawer-link">Settings</a>
+						<a href="#" class="drawer-link">Lock Screen</a>
+					</div>
+					<div class="signout"><button onclick="handleSignoutClick();" class="btn1">Sign Out</button></div>
+				</div>
+			</div>
+		</header>
+		<script
+		src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		crossorigin="anonymous"></script>
+		<script src="main.js"></script>
+	</body>
+</html>

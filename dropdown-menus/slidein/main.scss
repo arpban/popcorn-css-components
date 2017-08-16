@@ -1,0 +1,192 @@
+$font: "Lato", sans-serif;
+//colors for the drawer
+$drawer-handle-color: black;
+$drawer-handle-color-open: white;
+$drawer-space-bg: black;
+$drawer-space-text: #fafafa;
+$drawer-space-links-hover: #338fff;
+
+header * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+header:before,
+header:after * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    padding: 15px;
+    .text{
+        float: right;
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 2px;
+    }
+}
+
+.btn1{
+    background: transparent;
+    color: inherit;
+    padding: 12px;
+    border: solid 1px;
+    border-radius: 2px;
+    cursor: pointer;
+    &:hover{
+        color: $drawer-space-links-hover;
+        border-color: $drawer-space-links-hover;
+    }
+    &:focus{
+        outline: none;
+    }
+}
+
+.drawer {
+    display: none;
+    .drawer-handle {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        z-index: 501;
+        width: 30px;
+        height: 35px;
+        cursor: pointer;
+
+        span {
+            position: absolute;
+            cursor: pointer;
+            height: 1px;
+            width: 30px;
+            background: $drawer-handle-color;
+            position: absolute;
+            display: block;
+            content: '';
+            top: 0px;
+
+            &:before, &:after {
+                cursor: pointer;
+                height: 1px;
+                width: 30px;
+                background: $drawer-handle-color;
+                position: absolute;
+                display: block;
+                content: '';
+                top: 0px;
+            }
+
+            &:before {}
+        }
+
+        span.second{
+            top: 7px;
+        }
+
+        span {
+            -webkit-transition: all 0.2s ease;
+            -moz-transition: all 0.2s ease;
+            -ms-transition: all 0.2s ease;
+            -o-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+
+            &:after {
+                -webkit-transition: all 0.2s ease;
+                -moz-transition: all 0.2s ease;
+                -ms-transition: all 0.2s ease;
+                -o-transition: all 0.2s ease;
+                transition: all 0.2s ease;
+                top: 14px;
+            }
+
+            &:before {
+                -webkit-transition: all 0.2s ease;
+                -moz-transition: all 0.2s ease;
+                -ms-transition: all 0.2s ease;
+                -o-transition: all 0.2s ease;
+                transition: all 0.2s ease;
+                top: 7px;
+            }
+        }
+    }
+
+    .drawer-handle.open {
+        position: fixed;
+        span {
+            transform: rotate(45deg);
+            top: 10px;
+            background: $drawer-handle-color-open;
+
+            &:before {
+                background-color: transparent;
+            }
+
+            &:after {
+                background: $drawer-handle-color-open;
+                transform: rotate(90deg);
+                top: 0px;
+            }
+        }
+    }
+
+    .drawer-space {
+        position: fixed;
+        z-index: 500;
+        transform: translateX(-1000%);
+        width: 40%;
+        height: 100%;
+        // background-image: linear-gradient(to bottom, #ace0f9 0%, #ffffff 100%);
+        background-color: $drawer-space-bg;
+        color: $drawer-space-text;
+        transition: 400ms;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 20px;
+        font-size: 15px;
+        &.open {
+            top: 0;
+            left: 0;
+            transform: translateX(0%);
+        }
+        div{
+            padding: 10px 0px;
+        }
+        .username{
+            font-size: 16px;
+            text-transform: capitalize;
+        }
+        .quote-of-the-day{
+            width: 90%;
+        }
+        .links{
+            .drawer-button{
+                display: block;
+                background-color: transparent;
+                border: none;
+                font-size: 16px;
+                padding: 5px 0px;
+                &:hover{
+                    color: $drawer-space-links-hover;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 900px){
+    .drawer{
+        .drawer-space{
+            width: 50%;
+        }
+    }
+}
+@media (max-width: 600px){
+    .drawer{
+        .drawer-space{
+            width: 100%;
+        }
+    }
+}
