@@ -19,13 +19,13 @@ html, body {
 img{
     max-width: 100%;
 }
-.notebooks{
+.cards{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content:flex-start;
 	flex-grow: 1;
 	align-items: flex-start;
-	.notebook{
+	.card{
 		// min-width: 210px;
 		// flex-basis: 23.35767%;
 		width: 23.4042553%;
@@ -98,8 +98,8 @@ img{
 	.dashboard{
 		.main{
 			.content{
-				.notebooks{
-					.notebook{
+				.cards{
+					.card{
 						// flex-basis: 100%;
 						width: 31.66666666%;
 						margin-left: 0.833333367%;
@@ -116,8 +116,8 @@ img{
 	.dashboard{
 		.main{
 			.content{
-				.notebooks{
-					.notebook{
+				.cards{
+					.card{
 						// flex-basis: 100%;
 						width: 100%;
 						// margin-left: 0.79787235%;
