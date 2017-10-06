@@ -7,20 +7,20 @@ $orange: #ff8000;
 $blue: #338fff;
 
 
-.create-notebook-modal * {
+.modal * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-.create-notebook-modal:before,
-.create-notebook-modal:after * {
+.modal:before,
+.modal:after * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-.create-notebook-modal{
+.modal{
     display: none;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
